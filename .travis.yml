@@ -3,11 +3,12 @@ mono: none
 sudo: required
 dist: trusty
 dotnet: 2.0.0
-solution: /src/Useful.sln
+solution: Useful.sln
 
 install:
+- cd src
 - dotnet restore
 
 script:
  - dotnet build
- - dotnet test /src/Useful.Tests/Useful.Tests.csproj
+ - dotnet test Useful.Tests/Useful.Tests.csproj
